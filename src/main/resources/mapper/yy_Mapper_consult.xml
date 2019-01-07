@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hangduo.dao.yy_dao_consult" >
+    <resultMap id="Map_consult" type="com.hangduo.entity.Consult" >
+        <id column="consultId" property="consultId"  />
+        <result column="consultName" property="consultName"  />
+        <result column="consultText" property="consultText"  />
+        <result column="userPhone" property="userPhone"  />
+        <result column="consultTime" property="consultTime"  />
+    </resultMap>
+    <!--查询全部 -->
+    <select id="select_All_Con" resultMap="Map_consult">
+       SELECT * FROM consult
+    </select>
+    <!--根据电话直接查询-->
+    <select id="getConsultByPhone" resultMap="Map_consult" parameterType="String">
+SELECT * FROM consult WHERE userPhone=#{userPhone}
+    </select>
+    <!--根据内容模糊查询 暂未实现如何模糊查询-->
+    <select id="getConsultByText" resultMap="Map_consult" parameterType="String">
+SELECT * FROM consult WHERE consultText LIKE  "%"#{consultText}"%"
+    </select>
+    <delete id="DelConsultByID" parameterType="java.lang.Integer" >
+       DELETE FROM consult WHERE consult_id=#{consultId}
+    </delete>
+
+</mapper>

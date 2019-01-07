@@ -4,6 +4,9 @@ public class Consult {
 
     private int consultId;
     private String consultName;
+    private String consultText;
+    private String consultTime;
+    private String userPhone;
 
     public int getConsultId() {
         return consultId;
@@ -45,9 +48,8 @@ public class Consult {
         this.userPhone = userPhone;
     }
 
-    private String consultText;
-    private String consultTime;
-    private String userPhone;
+
 
 
 }
+

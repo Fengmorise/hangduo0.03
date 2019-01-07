@@ -47,6 +47,22 @@
     </script>
   </head>
   <body>
+  <div>
+  <a href="/stAllConsult">点击查全部</a>
+    <form action="/getConsultByPhone">
+      输入手机号：<input type="text" name="userPhone">
+      <input type="submit" value="根据手机号查">
+    </form>
+    <form action="/getConsultByText">
+      输入文本：<input type="text" name="consultText">
+      <input type="submit" value="根据文本模糊查">
+    </form>
+    <form action="/DelConsultByID">
+      输入ID进行删除：<input type="text" name="consultId">
+      <input type="submit" value="点击删除">
+    </form>
+
+  </div>
     <div id="base" class="">
 
       <!-- Unnamed (矩形) -->
