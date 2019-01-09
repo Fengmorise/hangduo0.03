@@ -18,10 +18,33 @@ SELECT * FROM consult WHERE userPhone=#{userPhone}
     </select>
     <!--根据内容模糊查询 暂未实现如何模糊查询-->
     <select id="getConsultByText" resultMap="Map_consult" parameterType="String">
-SELECT * FROM consult WHERE consultText LIKE  "%"#{consultText}"%"
+SELECT * FROM consult WHERE consultText LIKE  ('%',#{consultText},'%')
     </select>
     <delete id="DelConsultByID" parameterType="java.lang.Integer" >
        DELETE FROM consult WHERE consult_id=#{consultId}
     </delete>
+<!-- int getPage();
+    //分页首页显示
+    ArrayList<Consult> PageFirst();
+    //分页末页显示-第一个传入page/7 第二个传入page%7
+    ArrayList<Consult> PageEnd(int page1,int page2); -->
+
+    <!--一页显示7条数据 传入一个翻到第几页了-->
+    <select id="PageIndex" resultMap="Map_consult">
+      SELECT * FROM consult LIMIT #{page},7
+    </select>
+
+    <!--显示首页-->
+    <select id="PageFirst" resultMap="Map_consult">
+      SELECT * FROM consult LIMIT 0,7
+    </select>
+<!--查询page-->
+    <select id="getPage" resultType="java.lang.Integer" >
+        SELECT COUNT(*) FROM consult
+    </select>
+
+
+
+
 
 </mapper>

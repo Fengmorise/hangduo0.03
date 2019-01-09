@@ -33,4 +33,26 @@ public class yy_Service_consult_Impl implements yy_Service_consult {
     public int DelConsultByID(int consultId) {
         return ydc.DelConsultByID(consultId);
     }
+
+    @Override//分页-首页
+    public ArrayList<Consult> PageFirst() {
+        return ydc.PageFirst();
+    }
+
+    @Override//分页-任意页
+    public ArrayList<Consult> PageIndex(int page) {
+        return ydc.PageIndex(page);
+    }
+
+    @Override
+    public int getPage() {
+        return ydc.getPage();
+    }
+
+    public int getAPage(){
+        //不写 目前该模块功能待定
+        return 0;
+    }
+
+
 }

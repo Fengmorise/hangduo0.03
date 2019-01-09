@@ -1,0 +1,267 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.top-1{
+	height: 50px;
+	width: 1366px;
+	background-color:rgba(70, 76, 91, 1);
+	overflow: hidden;
+}
+
+
+.logo{
+	width: 30px;
+	height: 30px;
+	border-radius:50px 50px 50px 50px ;
+	background-color: #eee;
+	box-shadow: none;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.text-1{
+	margin-left: 70px;
+	font-size: 18px;
+	color: white;
+	top: 15px;
+	float: left;
+	margin-top: -25px;
+}
+
+.div-dakuang-1{
+	width: 240px;
+	height: 50px;
+	float: left;
+	float: right;
+	position: relative;
+	top: -40px;
+}
+
+#Name{
+	height: 50px;
+	width: 120px;
+	overflow: hidden;
+		cursor: pointer;
+}
+
+#nameid{
+	color: #eee;
+	text-align: center;
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+#Name:hover{
+	background-color: rgba(26,188,156,1);
+}
+
+
+#stopName{
+	height: 50px;
+	width: 120px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	float: right;
+	top: -50px;
+}
+#stopName:hover{
+	background-color: rgba(26,188,156,1);
+}
+
+.faguiguanli span{
+	font-size: 13px;
+	position: relative;
+	top: 8px;
+	color: white;
+
+}
+.faguiguanli2 span{
+	font-size: 13px;
+	position: relative;
+	top: 8px;
+	color: white;
+
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.faguiguanli{
+	border: 3px solid white;
+	border-left:0px ;
+	background-color: #666666;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+}
+.faguiguanli2{
+	border: 3px solid white;
+	border-left:0px ;
+	background-color: #666666;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.faguiguanli3{
+	border: 3px solid white;
+	border-left:0px ;
+	background-color: #666666;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.faguiguanli3 span{
+	font-size: 13px;
+	position: relative;
+	top: 8px;
+	color: white;
+
+}
+
+
+.faguiguanli4{
+	border: 3px solid white;
+	border-left:0px ;
+	background-color: #666666;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.faguiguanli4 span{
+	font-size: 13px;
+	position: relative;
+	top: 8px;
+	color: white;
+
+}
+.nei-1{
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	position: relative;
+	top: 10px;
+	font-size:13px ;
+}
+
+.right-neirong-1{
+	margin-top: 25px;
+	width: 200px;
+}
+
+.nei-1{
+	z-index: 100;
+	cursor: pointer;
+}
+
+.nei-1:hover{
+	background-color: silver;
+}
+
+.right-neirong-1 .nei-1{
+	line-height:40px ;
+}
+.right-neirong-2 .nei-1{
+	line-height:40px ;
+}
+.right-neirong-3 .nei-1{
+	line-height:40px ;
+}
+
+.right-neirong-4 .nei-1{
+	line-height:40px ;
+}
+
+
+
+
+.ssyouyong>div{
+	border: 1px solid #666666;
+	float: left;
+	width: 1100px;
+	height: 800px;
+}
+.dakuang-2{
+	border: 1px solid #666666;
+	float: left;
+	width: 1100px;
+	height: 800px;
+	background-color: darkorange;
+}
+.dakuang-3{
+	border: 1px solid #666666;
+	float: left;
+	width: 1100px;
+	height: 800px;
+	background-color: darkorange;
+}
+.dakuang-4{
+	border: 1px solid #666666;
+	float: left;
+	width: 1100px;
+	height: 800px;
+}
+
+
+
+
+.ssss{
+	position: absolute;
+	top: 78px;
+	left: 220px;
+}
+
+
+.dakuang-da .name1{
+	background: silver;
+}
+
+
+.text-2{
+	position: relative;
+	top: 10px;
+	font-size: 15px;
+	left: 10px;
+	color: #666666;
+}
+
+tr th{
+	padding: 8px 20px 8px 20px;
+	background-color: #eee;
+	font-size: 14px;
+}
+
+tr td{
+	padding: 8px 20px 8px 20px;
+	font-size: 14px;
+}
+
+
+.ssyouyong>div{
+	
+	display: none;
+}
+
+.ssyouyong .dakuang-1{
+	display: block;
+}
+
+option{
+	font-size: 14px;
+}
+
+

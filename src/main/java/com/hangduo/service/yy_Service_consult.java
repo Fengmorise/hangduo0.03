@@ -1,6 +1,7 @@
 package com.hangduo.service;
 
 import com.hangduo.entity.Consult;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
 
@@ -13,7 +14,14 @@ public interface yy_Service_consult {
     public ArrayList<Consult> getConsultByText(String consultText);
     //根据ID删除
     int DelConsultByID(int consultId);
-
+/*
+一下为分页
+* */
+    int getPage();
+    //分页首页显示---
+    ArrayList<Consult> PageFirst();
+    //位于首页和末页的中间页
+    ArrayList<Consult> PageIndex(@Param("page")int page);
 
 
 }
