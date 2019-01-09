@@ -13,7 +13,7 @@ public interface yy_Service_consult {
     //模糊查询包含文本的
     public ArrayList<Consult> getConsultByText(String consultText);
     //根据ID删除
-    int DelConsultByID(int consultId);
+       public int DelConsultByID(int consultId);
 /*
 一下为分页
 * */

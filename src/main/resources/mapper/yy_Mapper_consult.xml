@@ -18,7 +18,7 @@ SELECT * FROM consult WHERE userPhone=#{userPhone}
     </select>
     <!--根据内容模糊查询 暂未实现如何模糊查询-->
     <select id="getConsultByText" resultMap="Map_consult" parameterType="String">
-SELECT * FROM consult WHERE consultText LIKE  ('%',#{consultText},'%')
+SELECT * FROM consult WHERE consultText LIKE  CONCAT('%%',#{consultText},'%%')
     </select>
     <delete id="DelConsultByID" parameterType="java.lang.Integer" >
        DELETE FROM consult WHERE consult_id=#{consultId}

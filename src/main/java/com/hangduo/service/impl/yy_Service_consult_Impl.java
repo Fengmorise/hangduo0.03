@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class yy_Service_consult_Impl implements yy_Service_consult {
 
     @Resource
-    yy_dao_consult ydc;
+   private yy_dao_consult ydc;
 
     @Override
     public ArrayList<Consult> st_All_Consult() {

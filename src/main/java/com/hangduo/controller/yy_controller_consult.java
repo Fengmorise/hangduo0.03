@@ -11,7 +11,7 @@ import java.util.Map;
 @Controller
 public class yy_controller_consult {
     @Resource
-    yy_Service_consult ysc;
+  private   yy_Service_consult ysc;
     //查询所有
     @RequestMapping("show")
     public String show(){
@@ -20,6 +20,19 @@ public class yy_controller_consult {
 
     @RequestMapping("stAllConsult")
     public String stAllConsult(Map<String,Object> map){
+        //getpage 获取的是总数量
+        Integer page=0;
+        int tpage=ysc.getPage();
+        if (tpage>7){
+            if (tpage%7==0){
+                page=tpage/7;
+            }else {
+                page=tpage/7+1;
+            }
+        }else {
+            page=1;
+        }
+        map.put("yy_IndexPage",page);
         try {
             ArrayList<Consult> allConsult=ysc.PageFirst();
 //            ArrayList<Consult> allConsult= ysc.st_All_Consult();
@@ -27,7 +40,7 @@ public class yy_controller_consult {
         }catch (Exception e){
             e.printStackTrace();
         }
-        return "a";
+        return "index";
     }
     //根据电话查询
     @RequestMapping("getConsultByPhone")
@@ -36,11 +49,9 @@ public class yy_controller_consult {
 //            m.addAttribute("yy_allConsult",ysc.getConsultByPhone(userPhone));
             Consult consult=ysc.getConsultByPhone(userPhone);
             map.put("mapComsult",consult);
-            System.out.print("查手机号成功");
         }catch (Exception e){
             e.printStackTrace();
 //            m.addAttribute("yy_allConsult",null);
-            System.out.print("查手机号失败");
         }
         return "b";
     }
@@ -54,7 +65,7 @@ public class yy_controller_consult {
             e.printStackTrace();
 //            m.addAttribute("yy_allConsult",null);
         }
-        return "a";
+        return "index";
     }
 //根据ID定点删除
     @RequestMapping("DelConsultByID")
@@ -72,7 +83,7 @@ public class yy_controller_consult {
             map.put("DelYN","删除失败");
 //            m.addAttribute("yy_delCByID","删除成功");
         }
-        return "a";
+        return "index";
     }
 
     //这个controller处理分页功能
@@ -93,7 +104,7 @@ public class yy_controller_consult {
         System.out.println(page);
         ArrayList<Consult> yy_allConsult=ysc.PageIndex(page);
         map.put("yy_allConsult",yy_allConsult);
-        return "a";
+        return "index";
     }
 
     @RequestMapping("endPage")
@@ -101,7 +112,7 @@ public class yy_controller_consult {
         int page=pageUtil();
         ArrayList<Consult> endlist=ysc.PageIndex(page);
         map.put("yy_allConsult",endlist);
-        return "a";
+        return "index";
     }
 
 
